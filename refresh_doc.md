@@ -51,14 +51,6 @@ git push origin my_feature_branch
 
 ![pipelines](https://sun9-9.userapi.com/impg/gUB9gT2QVFlieoU1Q1vgtMpLnoqisJo-yKJLUQ/HIlFylgMW3U.jpg?size=1024x225&quality=95&sign=cee48d11740a102c88d37f01f4e0eae8&type=album)
 
-### Обработка ошибок
-
-Если пайплайны завершились с ошибкой, кликните по иконке пайплайна, чтобы выяснить причину ошибки. Исправьте ошибки в `Dockerfile`, повторите шаги выше:
-
-![pipelines_err](https://sun9-46.userapi.com/impg/N1JTrHsdFasjJEy9qmn2gGME0qcGE1P4C9Z9Ww/tlJq5SK-_8M.jpg?size=1015x118&quality=95&sign=46339b6afc92c32ac68b5bd0acef094b&type=album)
-
-![Лог ошибок](https://sun9-9.userapi.com/impg/h9wqvLlqKo_aLmIrGCEwHzvCdGB2k47yMDbYhA/qCBhDPezMNQ.jpg?size=1024x1181&quality=95&sign=2fff4f10f65a773d4c7856112ef5b75a&type=album)
-
 ### Обновление стенда
 
 Подключитесь к вашей виртуальной машине через SSH:
@@ -74,6 +66,19 @@ REPOSITORY_URL=http://intrepo.download.ispsystem.com/6/vm/branch/my_feature_bran
 !**где** `my_feature_branch` - **название ветки, из которой будет скачана коробка.**
 
 Дождитесь завершения установки компонентов на стенд.
+
+### Обработка ошибок
+
+Если пайплайны завершились с ошибкой, кликните по иконке пайплайна, чтобы выяснить причину ошибки. Исправьте ошибки в `Dockerfile`, повторите шаги выше:
+
+![pipelines_err](https://sun9-46.userapi.com/impg/N1JTrHsdFasjJEy9qmn2gGME0qcGE1P4C9Z9Ww/tlJq5SK-_8M.jpg?size=1015x118&quality=95&sign=46339b6afc92c32ac68b5bd0acef094b&type=album)
+
+![Лог ошибок](https://sun9-9.userapi.com/impg/h9wqvLlqKo_aLmIrGCEwHzvCdGB2k47yMDbYhA/qCBhDPezMNQ.jpg?size=1024x1181&quality=95&sign=2fff4f10f65a773d4c7856112ef5b75a&type=album)
+
+Так же, возможна ошибка с авторизацией в докере при установке необходимой коробки. В таком случае необходимо авторизироваться в нём:
+```bash
+docker login registry-dev.ispsystem.net
+```
 
 ### Завершение
 
